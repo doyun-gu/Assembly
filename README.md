@@ -1,5 +1,5 @@
 # Assembly
-Hello, This is Assembly code page!
+Hello, This is the Assembly code page!
 
 All the Codes here are written when I was studying Microcontroller Engineering I for the first year at the University of Manchester.
 
