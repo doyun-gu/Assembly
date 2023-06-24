@@ -11,4 +11,4 @@ Examples are not all of them provided, but most of the important exercises.
 
 For the mock exams, there are three levels: Basic (50%), Medium (75%), and Advanced(100%), and the numbers indicate the maximum grade that can be marked.
 
-I only attempted the "Advanced" level and uploaded it. Thank you.
+I only attempted the "Advanced" level except Practical Exam 3. Thank you!
