@@ -1,0 +1,58 @@
+    processor 18F8722
+    config OSC=HS, WDT=OFF, LVP=OFF
+    radix decimal
+    org 0x00
+    
+LATA equ 0xF89 
+TRISA equ 0xF92 
+PORTA equ 0xF80
+LATB equ 0xF8A 
+TRISB equ 0xF93 
+PORTB equ 0xF81
+LATC equ 0xF8B 
+TRISC equ 0xF94 
+PORTC equ 0xF82
+LATF equ 0xF8E 
+TRISF equ 0xF97 
+PORTF equ 0xF85
+LATH equ 0xF90 
+TRISH equ 0xF99 
+PORTH equ 0xF87
+LATJ equ 0xF91 
+TRISJ equ 0xF9A 
+PORTJ equ 0xF88
+ADCON1 equ 0xFC1
+SWITCHES equ 0x6
+
+
+    MOVLW B'11111100'
+    MOVWF TRISH
+    
+    CLRF TRISF
+    CLRF TRISA
+    
+L_MAIN
+    MOVF PORTH, W
+    MOVWF SWITCHES
+    
+    RRNCF SWITCHES, F
+    RRNCF SWITCHES, F
+    RRNCF SWITCHES, F
+    RRNCF SWITCHES, W
+    ANDLW B'00001111'
+    MOVWF SWITCHES
+    
+    MOVLW 12
+    SUBWF SWITCHES, W
+    BZ L_U2_E
+    
+    SETF LATF
+    BRA L_MAIN
+    
+L_U2_E
+    MOVLW B'00001110'
+    MOVWF LATF
+    BRA L_MAIN
+    
+    end
+    
