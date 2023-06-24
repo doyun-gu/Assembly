@@ -1,6 +1,27 @@
 ; Name: [Doyun GU]
 ; UID:  [11095970]
 
+; Basic:
+; 1. Create a soubroutine that contains 4 NOPs, loops 71 times, and uses DECF to decrease the loop counter. 
+;    In simulator mode, use a stopwatch to determine how long the subroutine takes to execute.
+;    Name the subroutine with that time to the nearest microsecond. e.g. _sub_350us.
+;
+; 2. Store the varible used in the subroutine in memocy address 0x400.
+;    Hint: You will need to use the MOVLB command and the bank selection flag.
+;    Remember to set the bank flag in MOVWF and DECF commands.
+ 
+; Medium:
+; 1. Use the code you created in the Basic task.
+; 2. The 7-segment displays should be off.
+; 3. Create a sound subroutine that has a delay of 40 ms. This new subroutine should call the subroutine from the Basic task.
+; 4. Use the stopwatch to ensure the timing is within 5%
+
+; Advanced:
+; 1. Nothing happens until PB2 is pressed.
+; 2. Once PB2 is pressed, start the following sequence.
+; 3. Use the code you created in the Medium task to turn the right-most LED on for 40 ms, then off for 40 ms and repeat.
+; 4. However, if the PB1 is pressed, then instead pause for 400 ms LED on and 400 ms off.
+
     processor 18F8722
     config OSC=HS, WDT=OFF, LVP=OFF
     radix decimal
