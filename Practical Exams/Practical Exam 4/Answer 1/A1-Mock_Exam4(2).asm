@@ -64,7 +64,7 @@ L_MAIN
     MOVF R_SWITCHES, W
     SUBWF L_SWITCHES
     
-    BN FLASHLEDs
+    BN FLASHLEDs    ; <IMPORTANT> Should Use 'BC' NOT 'BN'
     
     BRA L_MAIN
    
